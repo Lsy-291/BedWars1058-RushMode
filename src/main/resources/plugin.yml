@@ -1,0 +1,6 @@
+name: BedWars1058-RushMode
+version: '${project.version}'
+main: cc.pixeleast.rushmode.RushMode
+softdepend: [BedWars1058]
+authors: [lsy291]
+description: BedWars1058 Rush Mode Addon
