@@ -13,7 +13,7 @@
 
     <description>BedWars1058 Rush Mode Addon</description>
     <properties>
-    <java.version>1.8</java.version>
+    <java.version>17</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -59,6 +59,10 @@
           <id>sonatype</id>
           <url>https://oss.sonatype.org/content/groups/public/</url>
       </repository>
+      <repository>
+            <id>lsy291-repo</id>
+          <url>https://repo.pixeleast.cc/repository/maven-public/</url>
+      </repository>
   </repositories>
 
   <dependencies>
@@ -67,6 +71,17 @@
           <artifactId>spigot-api</artifactId>
           <version>1.12-R0.1-SNAPSHOT</version>
           <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.andrei1058.bedwars</groupId>
+          <artifactId>bedwars-api</artifactId>
+          <version>1.0</version>
+          <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.github.Carleslc.Simple-YAML</groupId>
+          <artifactId>Simple-YAML</artifactId>
+          <version>1.8.4</version>
       </dependency>
   </dependencies>
 </project>
