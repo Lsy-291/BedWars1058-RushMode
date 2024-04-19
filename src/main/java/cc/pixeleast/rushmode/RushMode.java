@@ -37,7 +37,7 @@ public final class RushMode extends JavaPlugin {
         new Message();
 
         versionController = new VersionController();
-        getLogger().info("§bVersion: " + getDescription().getVersion() + " §2(" + versionController.getCommitAbbrev() + ")" +
+        getServer().getConsoleSender().sendMessage("§bVersion: " + getDescription().getVersion() + " §2(" + versionController.getCommitAbbrev() + ")" +
                 (versionController.isDirty() ? "§e - DEV" : ""));
     }
 
