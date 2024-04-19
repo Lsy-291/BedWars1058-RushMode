@@ -13,7 +13,7 @@
 
     <description>BedWars1058 Rush Mode Addon</description>
     <properties>
-    <java.version>17</java.version>
+    <java.version>11</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -41,6 +41,29 @@
           </execution>
         </executions>
       </plugin>
+        <plugin>
+            <groupId>io.github.git-commit-id</groupId>
+            <artifactId>git-commit-id-maven-plugin</artifactId>
+            <version>8.0.0</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>revision</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <dateFormat>yyyy-MM-dd HH:mm:ss</dateFormat>
+                <dateFormatTimeZone>GMT+8</dateFormatTimeZone>
+                <generateGitPropertiesFile>true</generateGitPropertiesFile>
+                <generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties</generateGitPropertiesFilename>
+                <injectAllReactorProjects>true</injectAllReactorProjects>
+                <prefix>git</prefix>
+                <format>properties</format>
+                <skipPoms>false</skipPoms>
+                <skip>false</skip>
+            </configuration>
+        </plugin>
     </plugins>
     <resources>
       <resource>

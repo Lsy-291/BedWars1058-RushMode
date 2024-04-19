@@ -5,6 +5,7 @@ import cc.pixeleast.rushmode.language.Message;
 import cc.pixeleast.rushmode.listeners.BridgeListener;
 import cc.pixeleast.rushmode.listeners.GameStartListener;
 import cc.pixeleast.rushmode.listeners.PlayerBuyListener;
+import cc.pixeleast.rushmode.versioncontrol.VersionController;
 import com.andrei1058.bedwars.api.BedWars;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
@@ -14,6 +15,7 @@ import java.util.Arrays;
 
 public final class RushMode extends JavaPlugin {
     public static RushMode plugin;
+    public static VersionController versionController;
     public static BedWars api;
     public static Config config;
 
@@ -34,8 +36,9 @@ public final class RushMode extends JavaPlugin {
         registerEvents(new GameStartListener(), new BridgeListener(), new PlayerBuyListener());
         new Message();
 
-        getLogger().info("§aAuthor: lsy291");
-        getLogger().info("§Version: " + getDescription().getVersion());
+        versionController = new VersionController();
+        getLogger().info("§bVersion: " + getDescription().getVersion() + " §2(" + versionController.getCommitAbbrev() + ")" +
+                (versionController.isDirty() ? "§e - DEV" : ""));
     }
 
     @Override
