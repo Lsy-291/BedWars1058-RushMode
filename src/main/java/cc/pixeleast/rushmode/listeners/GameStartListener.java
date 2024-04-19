@@ -91,6 +91,7 @@ public class GameStartListener implements Listener {
                     generator.setOre(new ItemStack(Material.EMERALD));
                     generator.setType(GeneratorType.EMERALD);
                     Misc.setGenerator(generator, "base");
+                    team.getGenerators().add(generator);
                 });
 
                 if (!team.isBedDestroyed()) new BedProtectionPlacer(arena, team).run();
