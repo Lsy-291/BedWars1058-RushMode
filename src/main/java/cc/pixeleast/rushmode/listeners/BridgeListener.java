@@ -88,6 +88,7 @@ public class BridgeListener implements Listener {
                     Block block = nextBlock.getBlock();
                     block.setType(Material.WOOL);
                     api.getVersionSupport().setBlockTeamColor(block, arena.getTeam(player).getColor());
+                    if (config.getBoolean(GENERAL_BRIDGE_KEEP_COLOR)) block.setData(placedBlock.getData());
                     nextBlock.add(vector);
                     block.getWorld().playSound(nextBlock, Sound.valueOf(config.getString(SOUNDS_BRIDGE)), 1, 1);
                     arena.addPlacedBlock(block);

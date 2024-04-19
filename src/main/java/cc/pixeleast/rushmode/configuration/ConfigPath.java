@@ -12,6 +12,7 @@ public class ConfigPath {
     public static final String GENERAL_BRIDGE_DELAY = GENERAL_BRIDGE + ".delay";
     public static final String GENERAL_BRIDGE_LENGTH = GENERAL_BRIDGE + ".length";
     public static final String GENERAL_BRIDGE_CONSUMING_BLOCKS = GENERAL_BRIDGE + ".consuming-blocks";
+    public static final String GENERAL_BRIDGE_KEEP_COLOR = GENERAL_BRIDGE + ".keep-color";
     public static final String GENERAL_BED_PROTECTION = "bed-protection";
     public static final String GENERAL_EVENTS = "events";
     public static final String GENERAL_BANNED_ITEMS = "banned-items";

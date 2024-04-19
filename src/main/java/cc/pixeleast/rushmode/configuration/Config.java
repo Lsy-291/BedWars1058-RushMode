@@ -51,6 +51,9 @@ public class Config extends ConfigManager {
         yml.setComment(GENERAL_BRIDGE_CONSUMING_BLOCKS, "Whether to consume the number of blocks built");
         yml.addDefault(GENERAL_BRIDGE_CONSUMING_BLOCKS, false);
 
+        yml.setComment(GENERAL_BRIDGE_KEEP_COLOR, "The blocks placed are the original color or team color");
+        yml.addDefault(GENERAL_BRIDGE_KEEP_COLOR, true);
+
         yml.setComment(GENERAL_BED_PROTECTION, "The defense layer of the bed\n" +
                 "Corresponding versions of materials, check https://helpch.at/docs/{version}/org/bukkit/Material");
         yml.addDefault(GENERAL_BED_PROTECTION, Arrays.asList("WOOD", "WOOL", "STAINED_GLASS"));
