@@ -21,11 +21,11 @@ public class Config extends ConfigManager {
         yml.addDefault(GENERAL_ARENA_GROUPS, List.of("Solo"));
 
         LinkedHashMap<String, List<Integer>> generators = new LinkedHashMap<>();
-        generators.put("base.iron", Arrays.asList(5, 1, 64));
-        generators.put("base.gold", Arrays.asList(2, 3, 32));
+        generators.put("base.iron", Arrays.asList(4, 1, 64));
+        generators.put("base.gold", Arrays.asList(1, 4, 32));
         generators.put("base.emerald", Arrays.asList(1, 45, 10));
-        generators.put("mid.diamond", Arrays.asList(1, 15, 10));
-        generators.put("mid.emerald", Arrays.asList(1, 30, 10));
+        generators.put("mid.diamond", Arrays.asList(1, 20, 10));
+        generators.put("mid.emerald", Arrays.asList(1, 35, 10));
 
         generators.forEach((type, config) -> {
             yml.addDefault(GENERAL_GENERATOR_AMOUNT.replace("%type%", type), config.get(0));
